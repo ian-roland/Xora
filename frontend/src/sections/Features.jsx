@@ -1,6 +1,8 @@
 import { Element } from "react-scroll";
 import { features } from "../constants";
 
+import Button from '../components/Button.jsx'
+
 const Features = () => {
   return (
     <section>
@@ -23,6 +25,11 @@ const Features = () => {
                         <img src={icon} className="size-28 object-contain" alt={title} />
                     </div>
                 </div>
+
+                <p className="caption mb-5 max-md:mb-6 max-md:h5">{caption}</p>
+                <h2 className="max-w-400 mb-7 h3 text-p4 max-md:mb-6 max-md:h5">{title}</h2>
+                <p className="mb-11 body-1 max-md:mb-8 max-md:body-3">{text}</p>
+                <Button icon={button.icon}>{button.title}</Button>
               </div>
             ))}
           </div>
