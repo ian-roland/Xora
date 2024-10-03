@@ -5,8 +5,8 @@ const Features = () => {
     <Element name="features">
         <div className="container">
         <div className="relative flex ">
-
             
+
 
         </div>
         </div>
