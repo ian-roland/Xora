@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Element } from "react-scroll";
 import { plans } from "../constants";
 import CountUp from "react-countup";
-import Button from '../components/Button.jsx'
+import Button from "../components/Button.jsx";
 
 const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
@@ -73,7 +73,7 @@ const Pricing = () => {
                 <div
                   className={clsx(
                     "absolute left-0 right-0 z-2 flex items-center justify-center",
-                    index === 1 ? "-top-6" : "-top6 xl:-top-11"
+                    index === 1 ? "-top-6" : "-top-6 xl:-top-11"
                   )}
                 >
                   <img
@@ -94,7 +94,7 @@ const Pricing = () => {
                 >
                   <div
                     className={clsx(
-                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercased",
+                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
                       index === 1 ? "border-p3 text-p3" : "border-p1 text-p1"
                     )}
                   >
@@ -133,7 +133,10 @@ const Pricing = () => {
                 </div>
                 <ul className="mx-auto space-y-4 xl:px-7">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="relative flex items-center gap-5">
+                    <li
+                      key={feature}
+                      className="relative flex items-center gap-5"
+                    >
                       <img
                         src={"/images/check.png"}
                         alt="check"
@@ -145,9 +148,7 @@ const Pricing = () => {
                 </ul>
 
                 <div className="mt-10 flex w-full justify-center">
-
                   <Button icon={plan.icon}> Get Started</Button>
-
                 </div>
 
                 {index === 1 && (
@@ -155,8 +156,6 @@ const Pricing = () => {
                     Limited time offer
                   </p>
                 )}
-
-                
               </div>
             ))}
           </div>
